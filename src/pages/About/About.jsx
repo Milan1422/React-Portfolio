@@ -1,11 +1,13 @@
+// react and react components
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "./About.css";
-import Profile from "../../assets/img/profile/profile.jpeg";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
+// local components
+import "./About.css";
+import Profile from "../../assets/img/profile/profile.jpeg";
 
 const About = () => {
   return (
@@ -38,7 +40,7 @@ const About = () => {
                     </a>
                   </div>
                   <div>
-                    <a href="">
+                    <a href="ResumeLink">
                       <Button className="m-2" variant="outline-success">
                         My Resume
                       </Button>

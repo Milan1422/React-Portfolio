@@ -1,12 +1,14 @@
+// react and react-components
 import React from "react";
 import Fade from "react-reveal/Fade";
 import { Parallax } from "react-parallax";
 import Container from "react-bootstrap/Container";
+// local components
 import "./App.css";
-import About from "./components/About/About";
+import About from "./pages/About/About";
 import Jumbotron from "./components/Jumbotron/Jumbotron";
 import Navbar from "./components/Navbar/Navbar";
-import Skills from "./components/Skills/Skills";
+import Skills from "./pages/Skills/Skills";
 import TitleMessage from "./components/TitleMessage/TitleMessage";
 import Wrapper from "./components/Wrapper/Wrapper";
 
