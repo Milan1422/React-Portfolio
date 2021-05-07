@@ -1,23 +1,68 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import "./About.css";
+import Profile from "../../assets/img/profile/profile.jpeg";
+import Image from "react-bootstrap/Image";
+import Button from "react-bootstrap/Button";
 
 const About = () => {
   return (
-    <div className="card mb-3">
-      <div className="row no-gutters">
-        <div className="col-md-4">
-          <img src="https://media-exp1.licdn.com/dms/image/C4E03AQGLx1Zbj1mdtA/profile-displayphoto-shrink_800_800/0/1613255569737?e=1625702400&v=beta&t=KP0MmurzAdbnIBQ43L_W2fkQ3GPKrG2ap8CqLTuOCL0" style={{marginLeft: 150, width: 250}} alt="..."></img>
-        </div>
-        <div className="col-md-8">
-          <div className="card-body text-center">
-            <h4 className="card-title">About Me</h4>
-            <p className="card-text">
-              Hi my name is Jesus Milan. I live in Kennesaw, GA with my beautiful wife and two giant dogs. I enjoy sitting in front of a monitor for hours researching and/or improving on my coding skills, with the occational gaming session. I am soon to conclude a rigorous, fast-paced full stack web development program from Georgia Tech. This program is teaching me the fundamentals I seek to start a career in Web Development. It also puts my abilities to multitask and manage heavy workload on timely manner.
-            </p>
-            <p>
-              I like to watch and practice many sports but soccer is by far my favorite, Go Atlanta United!
-            </p>
-          </div>
-        </div>
+    <div id="about">
+      <div className="about">
+        <h1 className="pt-3 text-center font-details pb-3">ABOUT ME</h1>
+        <Container>
+          <Row className="pt-3 pb-5 align-items-center">
+            <Col xs={12} md={6}>
+              <Row className="justify-content-center mb-2 mr-2 ">
+                <Image className="profile justify-content-end" alt="profile" src={Profile} thumbnail fluid />
+              </Row>
+            </Col>
+            <Col xs={12} md={6}>
+              <Row className=" align-items-start p-2 my-details rounded">
+                Hi there! I am <strong>&nbsp;Jesus Milan</strong>
+                <br />A passionate programmer and a gamer. I am a Full Stack Web Developer with React.js, Express.js, Node.js, and MongoDB as my tech stack.
+                <br />
+                In May 2021, I will successfully complete the full stack bootcamp program from Georgia Tech.
+                <br />
+                Working with the computers, my goal is always driven towards providing amazing experience with the best level of quality and service to the user who access my applications.
+                <br />I love learning about new technologies, what problems are they solving and How can I use them to build better and scalable products.
+                <br /> <br />
+                <Col className="d-flex justify-content-center flex-wrap">
+                  <div>
+                    <a href="#contact">
+                      <Button className="m-2" variant="outline-primary">
+                        Contact Me
+                      </Button>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="">
+                      <Button className="m-2" variant="outline-success">
+                        My Resume
+                      </Button>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://github.com/Milan1422" target="_blank" rel="noopener noreferrer">
+                      <Button className="m-2" variant="outline-dark">
+                        GitHub
+                      </Button>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://www.linkedin.com/in/jesus-milan-12532a1b2/" target="_blank" rel="noopener noreferrer">
+                      <Button className="m-2" variant="outline-info">
+                        LinkedIn
+                      </Button>
+                    </a>
+                  </div>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Container>
       </div>
     </div>
   );
