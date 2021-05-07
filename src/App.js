@@ -3,6 +3,7 @@ import './App.css';
 import About from './components/About/About';
 import Jumbotron from './components/Jumbotron/Jumbotron';
 import Navbar from "./components/Navbar/Navbar"
+import Skills from './components/Skills/Skills';
 import Wrapper from "./components/Wrapper/Wrapper"
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Navbar/>
       <Jumbotron/>
       <About/>
+      <Skills/>
     </Wrapper>
   );
 }
