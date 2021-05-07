@@ -1,45 +1,39 @@
 import React from "react";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Logo from "../../assets/icons/logo.svg";
+import "./Navbar.css";
 
-const Navbar = () => {
+const MyNavbar = () => {
   return (
-    <nav>
-      <ul className="nav justify-content-end bg-dark p-3">
-        <h1 class="navbar-brand text-white" href="#">
-          Navbar
-        </h1>
-        <li className="nav-item">
-          <a className="nav-link active text-white" href="Home">
-            Home
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link text-white" href="Skills">
-            Skills
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link text-white" href="About">
-            About
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link text-white" href="Experience">
-            Experience
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link text-white" href="Projects">
-            Projects
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link text-white" href="Contact">
-            Contact
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <div>
+      <Navbar
+        fixed="top"
+        variant="dark"
+        expand="md"
+        className="animate-navbar nav-theme justify-content-between"
+      >
+        <div>
+          <Navbar.Brand href="#home">
+            <img className="logo" src={Logo} alt="portfolio-icon" />
+          </Navbar.Brand>
+        </div>
+        <div>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto ">
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#about">About</Nav.Link>
+              <Nav.Link href="#skills">Skills</Nav.Link>
+              <Nav.Link href="#experience">Experience</Nav.Link>
+              <Nav.Link href="#projects">Projects</Nav.Link>
+              <Nav.Link href="#contact">Contact</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </div>
+      </Navbar>
+    </div>
   );
 };
 
-export default Navbar;
+export default MyNavbar;
