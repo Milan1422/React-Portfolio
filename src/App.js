@@ -15,6 +15,7 @@ import Wrapper from "./components/Wrapper/Wrapper";
 import Experience from "./pages/Experience/Experience";
 import TimeLine from "./components/ProjectTimeline/ProjectTimeline";
 import ContactForm from "./pages/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -65,7 +66,8 @@ function App() {
           <ContactForm />
         </Fade>
       </Container>
-
+      <hr />
+      <Footer />
     </Wrapper>
   );
 }
