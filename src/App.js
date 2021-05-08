@@ -14,6 +14,7 @@ import TitleMessage from "./components/TitleMessage/TitleMessage";
 import Wrapper from "./components/Wrapper/Wrapper";
 import Experience from "./pages/Experience/Experience";
 import TimeLine from "./components/ProjectTimeline/ProjectTimeline";
+import ContactForm from "./pages/Contact/Contact";
 
 function App() {
   return (
@@ -58,6 +59,13 @@ function App() {
           <TimeLine />
         </Slide>
       </Container>
+      <Container className="container-box rounded">
+        <Fade duration={500}>
+          <hr />
+          <ContactForm />
+        </Fade>
+      </Container>
+
     </Wrapper>
   );
 }
