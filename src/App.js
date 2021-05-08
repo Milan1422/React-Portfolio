@@ -13,6 +13,7 @@ import Skills from "./pages/Skills/Skills";
 import TitleMessage from "./components/TitleMessage/TitleMessage";
 import Wrapper from "./components/Wrapper/Wrapper";
 import Experience from "./pages/Experience/Experience";
+import TimeLine from "./components/ProjectTimeline/ProjectTimeline";
 
 function App() {
   return (
@@ -51,6 +52,12 @@ function App() {
           </Fade>
         </Container>
       </div>
+      <Container className="container-box rounded">
+        <Slide bottom duration={500}>
+          <hr />
+          <TimeLine />
+        </Slide>
+      </Container>
     </Wrapper>
   );
 }
