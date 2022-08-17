@@ -13,11 +13,14 @@ import L_GIT from "../../assets/img/skills/git-icon.svg";
 import L_HEROKU from "../../assets/img/skills/heroku.svg";
 import L_GITHUB_PAGES from "../../assets/img/skills/github.svg";
 import L_JAVASCRIPT from "../../assets/img/skills/javascript.svg";
+import L_JAVA from "../../assets/img/skills/java.svg";
 import L_JQUERY from "../../assets/img/skills/jquery-1.svg";
 import L_SEQUELIZE from "../../assets/img/skills/sequelize.svg";
 import L_HANDLEBARS from "../../assets/img/skills/handlebars-1.svg";
 import L_MONGOATLAS from "../../assets/img/skills/mongodb-icon-1.svg";
 import L_POSTMAN from "../../assets/img/skills/postman.svg";
+import L_PGSQL from "../../assets/img/skills/pgsql.svg";
+import L_SPRING from "../../assets/img/skills/spring.svg";
 
 export const skills = {
   frontend: [
@@ -81,7 +84,6 @@ export const skills = {
       imgSrc: L_HANDLEBARS,
       skillName: "Handlebars",
     },
-    
   ],
 
   backend: [
@@ -108,6 +110,12 @@ export const skills = {
       imgAltText: "Postman",
       imgSrc: L_POSTMAN,
       skillName: "Postman",
+    },
+    {
+      link: "https://spring.io/",
+      imgAltText: "Spring",
+      imgSrc: L_SPRING,
+      skillName: "Spring",
     },
   ],
   hostingPlatforms: [
@@ -137,6 +145,12 @@ export const skills = {
       imgSrc: L_JAVASCRIPT,
       skillName: "JavaScript",
     },
+    {
+      link: "https://dev.java/",
+      imgAltText: "Java",
+      imgSrc: L_JAVA,
+      skillName: "Java",
+    },
   ],
   databases: [
     {
@@ -150,6 +164,12 @@ export const skills = {
       imgAltText: "MySQL",
       imgSrc: L_MYSQL,
       skillName: "MySQL",
+    },
+    {
+      link: "https://www.postgresql.org/",
+      imgAltText: "PostgreSQL",
+      imgSrc: L_PGSQL,
+      skillName: "PostgreSQL",
     },
   ],
   versionControl: [

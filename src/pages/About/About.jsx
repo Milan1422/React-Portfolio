@@ -1,15 +1,32 @@
 // react and react components
-import React from "react";
+import React, { useState, useEffect} from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 // local components
 import "./About.css";
-import Profile from "../../assets/img/profile/profile.jpeg";
+import { Card } from "react-bootstrap";
 
 const About = () => {
+
+  const [avatarURL, setAvatarURL] = useState()
+  const [githubBio, setGithubBio] = useState()
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/webdevmilan")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setGithubBio(result.bio)
+          setAvatarURL(result.avatar_url)
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+  }, []);
+
   return (
     <div id="about">
       <div className="about">
@@ -18,18 +35,35 @@ const About = () => {
           <Row className="pt-3 pb-5 align-items-center">
             <Col xs={12} md={6}>
               <Row className="justify-content-center mb-2 mr-2 ">
-                <Image className="profile justify-content-end" alt="profile" src={Profile} thumbnail fluid />
+                <Card>
+                  <Card.Img variant="top" src={avatarURL} thumbnail fluid/>
+                  <Card.Body>
+                    <Card.Title>Bio</Card.Title>
+                    <Card.Text>{githubBio}</Card.Text>
+                  </Card.Body>
+                </Card>
               </Row>
             </Col>
             <Col xs={12} md={6}>
               <Row className=" align-items-start p-2 my-details rounded">
                 Hi there! I am <strong>&nbsp;Jesus Milan</strong>
-                <br />A passionate programmer and a gamer. I am a Full Stack Web Developer with React.js, Express.js, Node.js, and MongoDB as my tech stack.
                 <br />
-                In May 2021, I will successfully complete the full stack bootcamp program from Georgia Tech.
+                Jesus Milan is a goal-driven, patient, responsible, eager to be
+                a top performer type of software developer.
                 <br />
-                Working with the computers, my goal is always driven towards providing amazing experience with the best level of quality and service to the user who access my applications.
-                <br />I love learning about new technologies, what problems are they solving and How can I use them to build better and scalable products.
+                In May 2021, I successfully completed the full stack bootcamp
+                program from Georgia Tech. Additionally, in Sepetember 2022, I
+                will also have completed Cook Systems' FastTrack training
+                program.
+                <br />
+                During both of these programs I have gained hands on experience
+                on many technical appliactions, methodical programming paradigms
+                such as OOP and many other technologies which can be found
+                below.
+                <br />
+                This knowledge have improved my skills in developing, deploying,
+                troubleshooting and maintaining applications.
+                <br />
                 <br /> <br />
                 <Col className="d-flex justify-content-center flex-wrap">
                   <div>
@@ -40,7 +74,11 @@ const About = () => {
                     </a>
                   </div>
                   <div>
-                    <a href="https://drive.google.com/file/d/1QeLfkF48IgzXOZC3bw3StvGPtEQm9jt5/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://drive.google.com/file/d/1rDDtO1HT92Tswu6TzfJPPt_U65-w3kh9/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Button className="m-2" variant="outline-success">
                         My Resume
                       </Button>
